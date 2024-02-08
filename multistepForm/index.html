@@ -1,0 +1,48 @@
+<!--Estructura general de multi-step form-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MultistepRegisterForm</title>
+    <link rel="icon" href="../src/icons/devchallenges.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <section class="logo-header">
+            <img src="../src/icons/HeaderLogo.png" alt="logo">
+        </section>
+        <section class="titles-header">
+            <h1>Welcome to this form</h1>
+            <h5>Please answer the questions</h5>
+        </section>
+    </header>
+    <main>
+        <section class="container">
+            <section class="subdivision">
+                <h2>Register</h2>
+            </section>
+            <section class="subdivision">
+                <form class="form" action="./ruta.php">
+                    <label for="nombre">Name</label>
+                    <input type="text" name="name-user" id="nombre" placeholder="Enter your name..">
+                    <br>
+                    <label for="correo">Email</label>
+                    <input type="email" name="email" id="correo" placeholder="example@gmail.com">
+                    <button>Continue</button>
+                </form>
+            </section>
+        </section>
+        <section class="steps">
+            <div class="textstep">
+                <p>Paso 1 de 3</p>
+            </div>
+            <div class="dots"></div>
+        </section>
+    </main>
+    <footer>
+        <p>Created by <a class="links" target="_blank" href="https://www.github.com/OyasumiiAlex">AlexHM</a>-devChallenges.io</p>
+    </footer>
+</body>
+</html>
