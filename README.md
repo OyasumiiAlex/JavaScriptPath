@@ -43,3 +43,10 @@ los cuales tienen la finalidad de poner en practica los fundamentos de javascrip
 ###### Descripción:
 <p>Este desafío ofrece una oportunidad para mejorar las habilidades en JavaScript mediante la creación de un formulario de
 registro de 3 pasos con secciones distintas, lo que le permitirá probar y mejorar su dominio de JavaScript.</p>
+<p>Mockup</p>
+<img width="361" alt="PreviewFormDesktop" src="https://github.com/OyasumiiAlex/devChallenges-JavaScriptPath/assets/44487342/738d9c48-244c-4460-8d9e-8ccf4de8cebe">
+<img width="195" alt="PreviewFormMobile" src="https://github.com/OyasumiiAlex/devChallenges-JavaScriptPath/assets/44487342/0918a45d-c640-4860-b798-52cd8b32f0ef">
+
+<p>Resultado</p>
+<img width="361" alt="PreviewFormDesktop" src="https://github.com/OyasumiiAlex/devChallenges-JavaScriptPath/assets/44487342/69290cf9-a229-41f0-ab29-7cbb928b241f">
+<img width="145" alt="PreviewFormMobile" src="https://github.com/OyasumiiAlex/devChallenges-JavaScriptPath/assets/44487342/784378fa-979c-4525-8ec4-dafbf0a89867">
