@@ -78,10 +78,15 @@ main {
 }
 
 .subdivision {
+    display: none;
     padding: 0.2rem;
     margin: 0.1rem 0.4rem;
     font-family: 'Zen Dots', Arial, Helvetica, sans-serif;
     ;
+}
+
+.active {
+    display: block;
 }
 
 .subdivision>h2 {
@@ -95,6 +100,49 @@ main {
     padding: 0.5rem;
     margin: auto;
     justify-content: center;
+}
+/*Style container 2*/
+.containeropc{
+    display: flex;
+    flex-direction: column;
+    margin: 0.1rem;
+    align-items: start;
+    justify-content: start;
+}
+.containeropc > label{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 20rem;
+    height: 2rem;
+    background-color: #c095e4;
+    border-radius: 0.7rem;
+    margin: 0.5rem;
+    padding: 0.3rem 1rem;
+}
+
+.containeropc > label:hover{
+    background-color: #C3FCF1;
+}
+
+.container > label > input{
+    margin: 0.3rem;
+    padding: 0.5rem;
+}
+
+.containeropc input[type="checkbox"] {
+    display: none;
+}
+/*Style container 3*/
+.div-form3{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+.div-form3 > label{
+    padding: 0.3rem;
+    margin: 0.3rem;
 }
 
 .form>label {
