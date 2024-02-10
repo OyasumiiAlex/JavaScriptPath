@@ -22,17 +22,52 @@
     </header>
     <main>
         <section class="container">
-            <section class="subdivision">
+            <section class="subdivision active" id="step1">
                 <h2>Register</h2>
-            </section>
-            <section class="subdivision">
-                <form class="form" action="./ruta.php">
+                <form class="form">
                     <label for="nombre">Name</label>
                     <input type="text" name="name-user" id="nombre" placeholder="Enter your name..">
                     <br>
                     <label for="correo">Email</label>
                     <input type="email" name="email" id="correo" placeholder="example@gmail.com">
-                    <button>Continue</button>
+                    <button type="button" onclick="changeContainer('step1', 'step2')">Continue</button>
+                </form>
+            </section>
+            <section class="subdivision" id="step2">
+                <h2>Which topics you are interested in?</h2>
+                <form class="form">
+                    <div class="containeropc">
+                        <label for="f2opc1">
+                            <input type="checkbox" name="f2opc1" id="f2opc1">Software Development
+                        </label>
+                        <label for="f2opc2">
+                            <input type="checkbox" name="f2opc2" id="f2opc2">User experience
+                        </label>
+                        <label for="f2opc3">
+                            <input type="checkbox" name="f2opc3" id="f2opc3">Graphic Design
+                        </label>
+                    </div>
+                    <button type="button" onclick="changeContainer('step2','step3')">Continue</button>
+                </form>
+            </section>
+            <section class="subdivision" id="step3">
+                <h2>Summary</h2>
+                <form class="form">
+                    <div class="div-form3">
+                        <label for="nombre">Name</label>
+                        <span id="f3opc1"></span>
+                    </div>
+                    <div class="div-form3">
+                        <label for="nombre">Email</label>
+                        <span id="f3opc2"></span>
+                    </div>
+                    <div class="div-form3">
+                        <label for="nombre">Topics</label>
+                        <span id="f3opc3"></span>
+                        <span id="f3opc4"></span>
+                        <span id="f3opc5"></span>
+                    </div>
+                    <button type="submit">Confirm</button>
                 </form>
             </section>
         </section>
@@ -47,6 +82,6 @@
         <p>Created by <a class="links" target="_blank"
                 href="https://www.github.com/OyasumiiAlex">AlexHM</a>-devChallenges.io</p>
     </footer>
+    <script src="main.js"></script>
 </body>
-
 </html>
