@@ -6,7 +6,7 @@ const botonC = document.getElementById('bcontinue');
 
 /*Funcion para validar texto vacio*/
 function isValidInput(){
-    if (inName.value === '' && inEmail.value === ''){
+    if (inName.value === '' || inEmail.value === ''){
         alert('No se aceptan campos vacios');
     }else{
         DataName = inName.value;
