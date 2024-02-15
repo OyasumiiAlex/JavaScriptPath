@@ -25,12 +25,13 @@
             <section class="subdivision active" id="step1">
                 <h2>Register</h2>
                 <form class="form">
+                    <span id="errorMsg" class="error-message"></span>
                     <label for="nombre">Name</label>
                     <input type="text" name="name-user" id="nombre" placeholder="Enter your name..">
                     <br>
                     <label for="correo">Email</label>
                     <input type="email" name="email" id="correo" placeholder="example@gmail.com">
-                    <button type="button" onclick="changeContainer('step1', 'step2')">Continue</button>
+                    <button id="bcontinue" type="button">Continue</button>
                 </form>
             </section>
             <section class="subdivision" id="step2">
@@ -47,7 +48,7 @@
                             <input type="checkbox" name="f2opc3" id="f2opc3">Graphic Design
                         </label>
                     </div>
-                    <button type="button" onclick="changeContainer('step2','step3')">Continue</button>
+                    <button type="button">Continue</button>
                 </form>
             </section>
             <section class="subdivision" id="step3">
