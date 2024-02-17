@@ -2,30 +2,76 @@
 /*1er script (Validar input)*/
 const inName = document.getElementById('nombre');
 const inEmail = document.getElementById('correo');
-const botonC = document.getElementById('bcontinue');
+const checkboxs = document.querySelectorAll('.container input[type= "checkbox"]');
+const botonF1 = document.getElementById('changeform1');
+const botonF2 = document.getElementById('changeform2');
 
-/*Funcion para validar texto vacio*/
-function isValidInput(){
-    if (inName.value === '' || inEmail.value === ''){
+/*Funcion para validar el primer formulario*/
+function isValidInput() {
+    if (inName.value === '' || inEmail.value === '') {
         alert('No se aceptan campos vacios');
-    }else{
+        return false;
+    } else {
         DataName = inName.value;
         DataEmail = inEmail.value;
+        return true;
     }
 }
-//Agregando el evento al boton
-botonC.addEventListener('click', isValidInput);
-
+/*Funcion para validar el segundo formulario*/
+function isValidCheckbox() {
+    //Creamos una variable para guardar el estado de checkbox
+    let opcchecked = false;
+    //Realizamos un recorrido por los checkbox
+    checkboxs.forEach(checkbox => {
+        //validamos checkbox
+        if (checkbox.checked) {
+            opcchecked = true;
+        }
+    });
+    /*Si ninguno esta en estado checked*/
+    if (!opcchecked) {
+        alert('Seleccione al menos una opción');
+        return false;
+    } else {
+        //Almacenamos la informacion
+        return true;
+    }
+}
 /*2do script (Añadir funcionalidad de transicion de ventanas)*/
-function getButtonClick(){
+function getButtonClick() {
     /*Obtener el nodo y cambiar su clase*/
     const stepOne = document.getElementById('step1');
     const stepTwo = document.getElementById('step2');
-    stepOne.classList.remove('active');
-    stepTwo.classList.add('active');
+    const stepThree = document.getElementById('step3');
+    //Condicion para cambiar de contenido
+    if (stepOne.classList.contains('active')) {
+        console.log('Paso 1 activo, cambiando a paso 2');
+        /*Si la ventana uno esta activa quitar su 
+        clase y la añadimos al segundo contenedor*/
+        stepOne.classList.remove('active');
+        stepTwo.classList.add('active');
+    } else if (stepTwo.classList.contains('active')) {
+        console.log('Paso 2 activo, cambiando a paso 3');
+        /*Si la segunda ventana esta activa,
+        quitamos su clase y la añadimos al tercer contenedor*/
+        stepTwo.classList.remove('active');
+        stepThree.classList.add('active');
+    }
 }
-//Cuando se presione el boton se manda a llama la clase getButton...
-botonC.addEventListener('click', getButtonClick);
+//Evento que valida el primer formulario 
+botonF1.addEventListener('click', function () {
+    console.log('Botón form1 presionado');
+    if (isValidInput()) {
+        getButtonClick();
+    }
+});
+//Evento que valida el segundo formulario
+botonF2.addEventListener('click', function () {
+    console.log('Boton form2 presionado');
+    if (isValidCheckbox()) {
+        getButtonClick();
+    }
+})
 /*3er script (Agregar efecto de pasos de página)*/
 
 
