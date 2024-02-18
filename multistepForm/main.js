@@ -1,11 +1,11 @@
 /*File to add interactivity*/
-/*1er script (Validar input)*/
 const inName = document.getElementById('nombre');
 const inEmail = document.getElementById('correo');
 const checkboxs = document.querySelectorAll('.container input[type= "checkbox"]');
 const botonF1 = document.getElementById('changeform1');
 const botonF2 = document.getElementById('changeform2');
 
+/*1er script (Validar input)*/
 /*Funcion para validar el primer formulario*/
 function isValidInput() {
     if (inName.value === '' || inEmail.value === '') {
@@ -34,6 +34,7 @@ function isValidCheckbox() {
         return false;
     } else {
         //Almacenamos la informacion
+
         return true;
     }
 }
@@ -70,9 +71,21 @@ botonF2.addEventListener('click', function () {
     console.log('Boton form2 presionado');
     if (isValidCheckbox()) {
         getButtonClick();
+        showData();
     }
 })
-/*3er script (Agregar efecto de pasos de página)*/
+/*3er script (Mostrar datos almacenados de los formularios)*/
+function showData(){
+    //Obtenemos span de cada formulario y cambiamos su contenido
+    document.getElementById('f3opc1').textContent = DataName;
+    document.getElementById('f3opc2').textContent = DataEmail;
+    //Datos del segundo formulario (checkbox)
+    document.getElementById('f3opc3').textContent = DataName;
+    document.getElementById('f3opc4').textContent = DataEmail;
+    document.getElementById('f3opc5').textContent = DataEmail;
+
+}
+/*4to script (Agregar efecto de pasos de página)*/
 
 
 
