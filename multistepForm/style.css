@@ -150,6 +150,11 @@ main {
     padding: 0.1rem;
     margin: 0.3rem;
 }
+.div-form3 >span{
+    font-size: 14px;
+    padding: 0.1rem;
+    margin:0.1rem 3rem;
+}
 
 .form>input {
     width: auto;
