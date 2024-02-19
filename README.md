@@ -44,7 +44,14 @@ los cuales tienen la finalidad de poner en practica los fundamentos de javascrip
 <p>Este desafío ofrece una oportunidad para mejorar las habilidades en JavaScript mediante la creación de un formulario de
 registro de 3 pasos con secciones distintas, lo que le permitirá probar y mejorar su dominio de JavaScript.</p>
 <p>Mockup</p>
-<img width="361" alt="PreviewFormDesktop" src="https://github.com/OyasumiiAlex/devChallenges-JavaScriptPath/assets/44487342/738d9c48-244c-4460-8d9e-8ccf4de8cebe">
-<img width="195" alt="PreviewFormMobile" src="https://github.com/OyasumiiAlex/devChallenges-JavaScriptPath/assets/44487342/0918a45d-c640-4860-b798-52cd8b32f0ef">
-
+<img width="300" alt="PreviewFormDesktop" src="https://github.com/OyasumiiAlex/devChallenges-JavaScriptPath/assets/44487342/738d9c48-244c-4460-8d9e-8ccf4de8cebe">
+<img width="170" alt="PreviewFormMobile" src="https://github.com/OyasumiiAlex/devChallenges-JavaScriptPath/assets/44487342/0918a45d-c640-4860-b798-52cd8b32f0ef">
+<br>
 <p>Resultado</p>
+<img width="300" alt="PreviewDesktopForm" src="https://github.com/OyasumiiAlex/devChallenges-JavaScriptPath/assets/44487342/f3f24af4-cfd5-4181-a327-c761034b6997">
+<img width="120" alt="PreviewMobileForm" src="https://github.com/OyasumiiAlex/devChallenges-JavaScriptPath/assets/44487342/c7441627-e32d-4da3-a6e4-ddb5ff642fa6">
+<br>
+<img width="450" alt="PreviewMobileForm" src="https://github.com/OyasumiiAlex/devChallenges-JavaScriptPath/assets/44487342/ae8bbe74-9dad-4b52-b103-e724e3b75245">
+
+
+
