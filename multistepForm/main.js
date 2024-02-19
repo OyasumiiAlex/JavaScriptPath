@@ -75,6 +75,7 @@ botonF1.addEventListener('click', function () {
     console.log('Botón form1 presionado');
     if (isValidInput()) {
         getButtonClick();
+        changeDot();
     }
 });
 //Evento que valida el segundo formulario
@@ -83,6 +84,7 @@ botonF2.addEventListener('click', function () {
     if (isValidCheckbox()) {
         getButtonClick();
         showData();
+        changeDot();
     }
 })
 botonF3.addEventListener('click', function () {
@@ -99,6 +101,17 @@ function showData() {
 
 }
 /*4to script (Agregar efecto de pasos de página)*/
-
+function changeDot(){
+    const dot1 = document.getElementById('dot1');
+    const dot2 = document.getElementById('dot2');
+    const dot3 = document.getElementById('dot3');
+    if (dot1.classList.contains('on')) {
+        dot1.classList.remove('on');
+        dot2.classList.add('on');
+    }else if(dot2.classList.contains('on')){
+        dot2.classList.remove('on');
+        dot3.classList.add('on');
+    }
+}
 
 

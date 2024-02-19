@@ -190,7 +190,6 @@ main {
     width: 20rem;
     height: 2.5rem;
     background-color: transparent;
-    border: 1px solid #A1A1A9;
     padding: 0.5rem;
     margin: auto;
 }
@@ -230,8 +229,8 @@ main {
     height: 15px;
 }
 .on{
-    border: 0.5px solid gray;
-    background-color: #c095e4;
+    border: 0.5px solid transparent;
+    background-color: #ffb7c5;
 }
 
 /*-------Styles footer------*/
