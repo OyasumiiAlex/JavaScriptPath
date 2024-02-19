@@ -4,6 +4,8 @@ const inEmail = document.getElementById('correo');
 const checkboxs = document.querySelectorAll('.container input[type= "checkbox"]');
 const botonF1 = document.getElementById('changeform1');
 const botonF2 = document.getElementById('changeform2');
+//Variables globales
+let DataCheckbox = '';
 
 /*1er script (Validar input)*/
 /*Funcion para validar el primer formulario*/
@@ -19,6 +21,8 @@ function isValidInput() {
 }
 /*Funcion para validar el segundo formulario*/
 function isValidCheckbox() {
+    //Mandamos a llamar a la variable global
+    DataCheckbox = '';
     //Creamos una variable para guardar el estado de checkbox
     let opcchecked = false;
     //Realizamos un recorrido por los checkbox
@@ -26,6 +30,11 @@ function isValidCheckbox() {
         //validamos checkbox
         if (checkbox.checked) {
             opcchecked = true;
+            /*Almacenamos el texto de la opcion seleccionada
+            += operador asignacion compuesta
+            parentElement obtiene el elemnto padre del checkbox = label
+            trim elimina espacios*/
+            DataCheckbox += checkbox.parentElement.textContent.trim() + ', ';
         }
     });
     /*Si ninguno esta en estado checked*/
@@ -33,8 +42,9 @@ function isValidCheckbox() {
         alert('Seleccione al menos una opción');
         return false;
     } else {
-        //Almacenamos la informacion
-
+        /*regex: ",": Busca una coma; "\s": Busca cero o mas espacios en blanco; 
+        "$": Indica el final de la cadena*/
+        DataCheckbox = DataCheckbox.replace(/,\s*$/, '');
         return true;
     }
 }
@@ -80,9 +90,7 @@ function showData(){
     document.getElementById('f3opc1').textContent = DataName;
     document.getElementById('f3opc2').textContent = DataEmail;
     //Datos del segundo formulario (checkbox)
-    document.getElementById('f3opc3').textContent = DataName;
-    document.getElementById('f3opc4').textContent = DataEmail;
-    document.getElementById('f3opc5').textContent = DataEmail;
+    document.getElementById('f3opc3').textContent = DataCheckbox;
 
 }
 /*4to script (Agregar efecto de pasos de página)*/
