@@ -215,6 +215,24 @@ main {
     margin: auto 0.3rem;
 
 }
+.icondot{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.2px;
+    margin: auto;
+    
+    border-radius: 1rem;
+}
+.icondot > img{
+    padding: 0.1rem;
+    width: 15px;
+    height: 15px;
+}
+.on{
+    border: 0.5px solid gray;
+    background-color: #c095e4;
+}
 
 /*-------Styles footer------*/
 footer {

@@ -85,7 +85,7 @@ botonF2.addEventListener('click', function () {
         showData();
     }
 })
-botonF3.addEventListener('click', function(){
+botonF3.addEventListener('click', function () {
     console.log('Boton form3 presionado');
     alert('Formulario enviado!');
 });
