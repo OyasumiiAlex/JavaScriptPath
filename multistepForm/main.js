@@ -4,6 +4,7 @@ const inEmail = document.getElementById('correo');
 const checkboxs = document.querySelectorAll('.container input[type= "checkbox"]');
 const botonF1 = document.getElementById('changeform1');
 const botonF2 = document.getElementById('changeform2');
+const botonF3 = document.getElementById('send-form');
 //Variables globales
 let DataCheckbox = '';
 
@@ -84,8 +85,12 @@ botonF2.addEventListener('click', function () {
         showData();
     }
 })
+botonF3.addEventListener('click', function(){
+    console.log('Boton form3 presionado');
+    alert('Formulario enviado!');
+});
 /*3er script (Mostrar datos almacenados de los formularios)*/
-function showData(){
+function showData() {
     //Obtenemos span de cada formulario y cambiamos su contenido
     document.getElementById('f3opc1').textContent = DataName;
     document.getElementById('f3opc2').textContent = DataEmail;
