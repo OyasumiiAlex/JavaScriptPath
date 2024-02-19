@@ -4,6 +4,7 @@ const inEmail = document.getElementById('correo');
 const checkboxs = document.querySelectorAll('.container input[type= "checkbox"]');
 const botonF1 = document.getElementById('changeform1');
 const botonF2 = document.getElementById('changeform2');
+const botonF3 = document.getElementById('send-form');
 //Variables globales
 let DataCheckbox = '';
 
@@ -74,6 +75,7 @@ botonF1.addEventListener('click', function () {
     console.log('Botón form1 presionado');
     if (isValidInput()) {
         getButtonClick();
+        changeDot();
     }
 });
 //Evento que valida el segundo formulario
@@ -82,10 +84,15 @@ botonF2.addEventListener('click', function () {
     if (isValidCheckbox()) {
         getButtonClick();
         showData();
+        changeDot();
     }
 })
+botonF3.addEventListener('click', function () {
+    console.log('Boton form3 presionado');
+    alert('Formulario enviado!');
+});
 /*3er script (Mostrar datos almacenados de los formularios)*/
-function showData(){
+function showData() {
     //Obtenemos span de cada formulario y cambiamos su contenido
     document.getElementById('f3opc1').textContent = DataName;
     document.getElementById('f3opc2').textContent = DataEmail;
@@ -94,6 +101,17 @@ function showData(){
 
 }
 /*4to script (Agregar efecto de pasos de página)*/
-
+function changeDot(){
+    const dot1 = document.getElementById('dot1');
+    const dot2 = document.getElementById('dot2');
+    const dot3 = document.getElementById('dot3');
+    if (dot1.classList.contains('on')) {
+        dot1.classList.remove('on');
+        dot2.classList.add('on');
+    }else if(dot2.classList.contains('on')){
+        dot2.classList.remove('on');
+        dot3.classList.add('on');
+    }
+}
 
 
