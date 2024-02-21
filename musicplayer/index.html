@@ -8,6 +8,52 @@
     <title>Music player JS</title>
 </head>
 <body>
-    
+    <header>
+        <section class="logo-header">
+            <img src="../src/icons/HeaderLogo.png" alt="logo">
+        </section>
+        <section class="titles-header">
+            <h1>Music player</h1>
+            <h5>Playing now...</h5>
+        </section>
+    </header>
+    <main>
+        <!--Contenido: album y nombre de cancion-->
+        <section class="album-content">
+            <div class="album">
+                <div class="vinylcontainer">
+                    <img src="../src/bg/vinyl-player.png" alt="">
+                </div>
+                <div class="containeralbum">
+                    <img src="../src/albums/album-1.png" alt="album-pic">
+                </div>
+            </div>
+            <div class="songname-content">
+                <div class="namesong">
+                    <h5>Letter from Yokosuka</h5>
+                </div>
+                <div class="artistsong">
+                    <h6>Nujabes</h6>
+                </div>
+            </div>
+        </section>
+        <!--Contenido: Botones-->
+        <section class="player-content">
+            <audio controls src="">Audio</audio>
+            <div class="controls">
+                <!--Iconos de controles-->
+                <div class="control-div" id="back">
+                    <img src="../src/icons/back-icon-white.png" alt="">
+                </div>
+                <div class="control-div" id="play">
+                    <img src="../src/icons/play-icon.png" alt="">
+                </div>
+                <div class="control-div" id="next">
+                    <img src="../src/icons/next-icon-white.png" alt="">
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
 </body>
 </html>
