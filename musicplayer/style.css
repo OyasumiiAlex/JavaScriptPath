@@ -129,15 +129,11 @@ main{
     justify-content: center;
     align-items: center;
 }
-.player-content > audio{
+#barplayer{
     width: 80%;
     height: 2rem;
     margin: 0.5rem;
     padding: 0.5rem;
-    background-color: transparent;
-    border: transparent;
-    outline: none;
-
 }
 .controls{
     display: flex;
@@ -148,18 +144,36 @@ main{
     justify-content: center;
     align-items: center;
     border: 1px solid blue;
-    height: 35px;
-    width: 35px;
+    height: auto;
+    width: auto;
+}
+#back > img ,#next > img{
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
+button{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    box-sizing: border-box;
+    border-radius: 1.5rem;
+    width: 50px;
+    height: 50px;
+    margin: 0.5rem;
     padding: 0.3rem;
-    margin: 1rem 0.7rem;
+    cursor: pointer;
+}
+.buttons > img{
+    width: 30px;
+    height: 30px;
+}
+#pause { 
+    display: none;
+    justify-content: center;
+    border: solid #FF1E1E 3px;
 }
 #play{
-    border-radius: 1.5rem;
-    background-color: aliceblue;
-    justify-content: right;
-}
-.control-div > img{
-    box-sizing: border-box;
-    height: 30px;
-    width: 30px;
+
+    border: solid #54B435 3px;
 }
