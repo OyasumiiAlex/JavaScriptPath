@@ -142,12 +142,40 @@ main {
     justify-content: center;
     align-items: center;
 }
+.audioduration-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 12px;
+    font-family: 'Zen Dots', Arial, Helvetica, sans-serif;
+    color: black;
+    width: 80%;
 
+}
+.start-audio{
+    border-radius: 1rem;
+    background-color: white;
+    margin: 0.3rem;
+    padding: 0.4rem;
+}
+.end-audio{
+    background-color: white;
+    border-radius: 1rem;
+    margin: 0.3rem;
+    padding: 0.4rem;
+}
+.slidefake{
+    width: 80%;
+    height: 1rem;
+    margin: auto;
+    padding: 0.5rem;
+}
 #barplayer {
     width: 80%;
-    height: 2rem;
-    margin: 0.5rem;
-    padding: 0.5rem;
+    height: 0rem;
+    margin: auto;
+    visibility: hidden;
+    display: block;
 }
 
 .controls {

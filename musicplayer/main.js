@@ -73,6 +73,7 @@ pauseButton.addEventListener('click', function(){
         pauseMusic(indexSong);
         isNowPlaying = false;
         changeButtons();
+                   
     }
 });
 audioslide.addEventListener('ended', function(){
@@ -80,7 +81,7 @@ audioslide.addEventListener('ended', function(){
     //next data album function
     changeDataAlbum(playlist[indexSong]);
 });
-/**/
+/*Evento para la tecla espacio*/
 document.addEventListener('keydown', (e) => {
     //Funcion para verificar cual fue la tecla presionada
     if (e.key === ' ') {
