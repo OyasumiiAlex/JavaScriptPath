@@ -52,7 +52,10 @@ function changeButtons(){
     pauseButton.classList.toggle('show', isNowPlaying);
 }
 /*Evento boton regresar*/
-backButton.addEventListener('click', returnSong);
+backButton.addEventListener('click', function(){
+    returnSong();
+    changeDataAlbum(playlist[indexSong]);
+});
 /*Evento boton siguiente*/
 nextButton.addEventListener('click', function(){
     nextSong();
@@ -75,4 +78,5 @@ pauseButton.addEventListener('click', function(){
 audioslide.addEventListener('ended', function(){
     nextSong();
     //next data album function
+    changeDataAlbum(playlist[indexSong]);
 });
