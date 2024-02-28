@@ -41,19 +41,22 @@ function returnSong(){
     playMusic(indexSong);
 }
 /*Funcion para cambiar datos de album*/
-function changeDataAlbum(){
+function changeDataAlbum(dataSong){
     albumImg.src = dataSong.album;
-
+    songName.innerText = dataSong.nombre
+    songArtist.innerText = dataSong.artista;
 }
 /*Funcion para obtener botones*/
 function changeButtons(){
     playButton.classList.toggle('show', !isNowPlaying);
     pauseButton.classList.toggle('show', isNowPlaying);
 }
-/*Evento de los botones*/
+/*Evento boton regresar*/
 backButton.addEventListener('click', returnSong);
+/*Evento boton siguiente*/
 nextButton.addEventListener('click', function(){
     nextSong();
+    changeDataAlbum(playlist[indexSong]);
 });
 playButton.addEventListener('click', function(){
     if(!isNowPlaying){
@@ -69,4 +72,7 @@ pauseButton.addEventListener('click', function(){
         changeButtons();
     }
 });
-audioslide.addEventListener('ended', nextSong);
+audioslide.addEventListener('ended', function(){
+    nextSong();
+    //next data album function
+});
