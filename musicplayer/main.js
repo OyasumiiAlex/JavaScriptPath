@@ -80,3 +80,18 @@ audioslide.addEventListener('ended', function(){
     //next data album function
     changeDataAlbum(playlist[indexSong]);
 });
+/**/
+document.addEventListener('keydown', (e) => {
+    //Funcion para verificar cual fue la tecla presionada
+    if (e.key === ' ') {
+        /*Llamamos a la funcion agregar nueva tarea y prevenimos que el evento
+        en este CacheStorage, la tecla space use su comportamiento original*/
+        e.preventDefault();
+        if(isNowPlaying){
+            pauseMusic();
+        }else{
+            playMusic(indexSong);
+        }
+        changeButtons();
+    }
+});
