@@ -142,34 +142,56 @@ main {
     justify-content: center;
     align-items: center;
 }
-.audioduration-container{
+
+.audioduration-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     font-size: 12px;
     font-family: 'Zen Dots', Arial, Helvetica, sans-serif;
     color: black;
-    width: 80%;
+    width: 50%;
 
 }
-.start-audio{
+
+.start-audio {
     border-radius: 1rem;
     background-color: white;
     margin: 0.3rem;
     padding: 0.4rem;
 }
-.end-audio{
+
+.end-audio {
     background-color: white;
     border-radius: 1rem;
     margin: 0.3rem;
     padding: 0.4rem;
 }
-.slidefake{
+
+.slidesranges {
     width: 80%;
-    height: 1rem;
-    margin: auto;
-    padding: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+    margin-right: 6rem;
+
 }
+
+.slidefake {
+    width: 60%;
+    height: 1rem;
+    margin: auto 0.5rem;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.slidevol {
+    width: 10%;
+    padding: 0.5rem;
+    margin: auto 0.5rem;
+}
+
 #barplayer {
     width: 80%;
     height: 0rem;
