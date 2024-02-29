@@ -92,6 +92,19 @@ audioslide.addEventListener('ended', function () {
     //next data album function
     changeDataAlbum(playlist[indexSong]);
 });
+/*calcula el tiempo actual de reproducción del audio 
+en función de la duración total del audio y la posición actual
+del control deslizante*/
+slideMusic.addEventListener('input', function(){
+    const currentTimeMusic = audioslide.duration * (slideMusic.value/100);
+    audioslide.currentTime = currentTimeMusic;
+});
+/*actualiza continuamente la posición del control 
+deslizante basada en el tiempo actual de reproducción del audio*/
+audioslide.addEventListener('timeupdate', function(){
+    const progress = (audioslide.currentTime / audioslide.duration) * 100;
+    slideMusic.value = progress;
+});
 /*Evento para la tecla espacio*/
 document.addEventListener('keydown', (e) => {
     //Funcion para verificar cual fue la tecla presionada
