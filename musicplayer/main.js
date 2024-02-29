@@ -15,7 +15,7 @@ const timerStart = document.getElementById('timer-start');
 const timerEnd = document.getElementById('timer-end');
 
 const slideMusic = document.getElementById('slidefake-audio');
-const slideVol = document.getElementById('slidevol');
+const slideVol = document.getElementById('slidevolume');
 
 //Variable (índice de la canción actual)
 let indexSong = 0;
@@ -92,9 +92,11 @@ audioslide.addEventListener('ended', function () {
     //next data album function
     changeDataAlbum(playlist[indexSong]);
 });
-/*calcula el tiempo actual de reproducción del audio 
-en función de la duración total del audio y la posición actual
-del control deslizante*/
+/*Evento de barra deslizante: calcula el tiempo actual de reproducción
+del audio en función de la duración total del audio y la posición actual
+del control deslizante; 100: el rango del control deslizante va de 0 a 100;
+Esto permite que el usuario pueda controlar manualmente la posición de 
+reproducción del audio al arrastrar el control deslizante.*/
 slideMusic.addEventListener('input', function(){
     const currentTimeMusic = audioslide.duration * (slideMusic.value/100);
     audioslide.currentTime = currentTimeMusic;
@@ -104,6 +106,16 @@ deslizante basada en el tiempo actual de reproducción del audio*/
 audioslide.addEventListener('timeupdate', function(){
     const progress = (audioslide.currentTime / audioslide.duration) * 100;
     slideMusic.value = progress;
+});
+/*Evento del volumen*/
+slideVol.addEventListener('input', function(){
+    // Convertir el valor del deslizador al rango correcto (0 a 1)
+    audioslide.volume = slideVol.value / 100; 
+});
+/*Evento que actualiza el volumen en la barra segun el volumen del audio*/
+audioslide.addEventListener('timeupdate', function(){
+    // Convertir el volumen del audio al rango del deslizador
+    slideVol.value = audioslide.volume * 100;
 });
 /*Evento para la tecla espacio*/
 document.addEventListener('keydown', (e) => {
