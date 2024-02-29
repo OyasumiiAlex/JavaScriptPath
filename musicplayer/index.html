@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="icon" href="../src/icons/devchallenges.png">
     <title>Music player JS</title>
 </head>
+
 <body>
     <header>
         <section class="logo-header">
@@ -24,8 +26,8 @@
                 <div class="vinylcontainer">
                     <img src="../src/bg/vinyl-player.png" alt="">
                 </div>
-                <div id="album-img" class="containeralbum">
-                    <img src="../src/albums/album-1.png" alt="album-pic">
+                <div class="containeralbum">
+                    <img id="album-img" src="../src/albums/album-1.png" alt="album-pic">
                 </div>
             </div>
             <div class="songname-content">
@@ -39,6 +41,14 @@
         </section>
         <!--Contenido: Botones-->
         <section class="player-content">
+            <div class="audioduration-container">
+                <div class="start-audio" id="timer-start">00:01</div>
+                <div class="end-audio" id="timer-end">04:30</div>
+            </div>
+            <div class="slidesranges">
+                <input type="range" name="" id="slidefake-audio" class="slidefake" value="20">
+                <input type="range" id="slidev" class="slidevol" value="10">
+            </div>
             <audio id="barplayer" controls src=""></audio>
             <div class="controls">
                 <!--Iconos de controles-->
@@ -62,4 +72,5 @@
     <footer></footer>
 </body>
 <script src="main.js" type="module"></script>
+
 </html>
