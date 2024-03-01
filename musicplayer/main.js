@@ -15,7 +15,7 @@ const timerStart = document.getElementById('timer-start');
 const timerEnd = document.getElementById('timer-end');
 
 const slideMusic = document.getElementById('slidefake-audio');
-const slideVol = document.getElementById('slidevol');
+const slideVol = document.getElementById('slidevolume');
 
 //Variable (índice de la canción actual)
 let indexSong = 0;
@@ -92,6 +92,53 @@ audioslide.addEventListener('ended', function () {
     //next data album function
     changeDataAlbum(playlist[indexSong]);
 });
+/*Evento de barra deslizante: calcula el tiempo actual de reproducción
+del audio en función de la duración total del audio y la posición actual
+del control deslizante; 100: el rango del control deslizante va de 0 a 100;
+Esto permite que el usuario pueda controlar manualmente la posición de 
+reproducción del audio al arrastrar el control deslizante.*/
+slideMusic.addEventListener('input', function () {
+    const currentTimeMusic = audioslide.duration * (slideMusic.value / 100);
+    audioslide.currentTime = currentTimeMusic;
+});
+/*actualiza continuamente la posición del control 
+deslizante basada en el tiempo actual de reproducción del audio*/
+audioslide.addEventListener('timeupdate', function () {
+    const progress = (audioslide.currentTime / audioslide.duration) * 100;
+    slideMusic.value = progress;
+});
+/*Evento del volumen*/
+slideVol.addEventListener('input', function () {
+    // Convertir el valor del deslizador al rango correcto (0 a 1)
+    audioslide.volume = slideVol.value / 100;
+});
+/*Evento que actualiza el volumen en la barra segun el volumen del audio*/
+audioslide.addEventListener('timeupdate', function () {
+    // Convertir el volumen del audio al rango del deslizador
+    slideVol.value = audioslide.volume * 100;
+});
+/*Evento que muestra la duracion del audio*/
+audioslide.addEventListener('loadedmetadata', function () {
+    const durationSong = formatTime(audioslide.duration);
+    timerEnd.textContent = `${durationSong}`;
+});
+//Evento que act el tiempo que recorre la musica
+audioslide.addEventListener('timeupdate', function () {
+    /*Accedemos a currentTime del audio y lo convertimos 
+    con ayuda de la funcion formatTime*/
+    const currentTimerSong = formatTime(audioslide.currentTime);
+    timerStart.textContent = `${currentTimerSong}`;
+});
+
+function formatTime(time) {
+    // Convertimos el tiempo en segundos a minutos y segundos
+    const minutes = Math.floor(time / 60);
+    const seconds = Math.floor(time % 60);
+    /*.padStart: Formatea el tiempo para mostrar siempre 2 dígitos para minutos y segundos
+    (agregando ceros a la izquierda si es necesario)*/
+    const formattedTime = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+    return formattedTime;
+}
 /*Evento para la tecla espacio*/
 document.addEventListener('keydown', (e) => {
     //Funcion para verificar cual fue la tecla presionada
