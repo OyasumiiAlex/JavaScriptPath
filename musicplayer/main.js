@@ -117,6 +117,19 @@ audioslide.addEventListener('timeupdate', function(){
     // Convertir el volumen del audio al rango del deslizador
     slideVol.value = audioslide.volume * 100;
 });
+/*Evento que muestra la duracion del audio*/
+audioslide.addEventListener('loadedmetadata', function(){
+    const durationSong = formatTime(audioslide.duration);
+    timerEnd.textContent = `${durationSong}`;
+});
+function formatTime(time) {
+    // Convertimos el tiempo en segundos a minutos y segundos
+    const minutes = Math.floor(time / 60);
+    const seconds = Math.floor(time % 60);
+    // Formateamos el tiempo para mostrar siempre 2 dígitos para minutos y segundos
+    const formattedTime = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+    return formattedTime;
+}
 /*Evento para la tecla espacio*/
 document.addEventListener('keydown', (e) => {
     //Funcion para verificar cual fue la tecla presionada
