@@ -53,5 +53,17 @@ registro de 3 pasos con secciones distintas, lo que le permitirá probar y mejor
 <br>
 <img width="450" alt="PreviewMobileForm" src="https://github.com/OyasumiiAlex/devChallenges-JavaScriptPath/assets/44487342/ae8bbe74-9dad-4b52-b103-e724e3b75245">
 
+- ##### 2) Music Player
+  ###### Descripción:
+<p>Este desafío es una excelente oportunidad para mejorar sus habilidades de JavaScript mediante la creación de una aplicación de
+reproductor de música simple que pruebe sus capacidades de administración de datos utilizando JavaScript.</p>
+<p>Mockup</p>
+<img width="350" alt="Desktopmockupmp3" src="https://github.com/OyasumiiAlex/devChallenges-JavaScriptPath/assets/44487342/cb099e0e-b3a3-4af4-b47a-58e880f88968">
+<br>
+<p>Resultado</p>
+<img width="450" alt="gifpreviewmp3" src="https://github.com/OyasumiiAlex/devChallenges-JavaScriptPath/assets/44487342/f6fa017a-e1ad-40e1-9246-cca7e8dbeca1">
+<br>
+<img width="450" alt="desktopmp3" src="https://github.com/OyasumiiAlex/devChallenges-JavaScriptPath/assets/44487342/8195bc39-5744-486b-bcdd-0f43a3fe9f94">
+<img width="170" alt="mobilemp3" src="https://github.com/OyasumiiAlex/devChallenges-JavaScriptPath/assets/44487342/58d75812-15b8-4791-9af5-2aee6c9f9164">
 
 
