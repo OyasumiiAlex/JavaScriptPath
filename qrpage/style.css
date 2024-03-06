@@ -1,0 +1,223 @@
+/*Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+
+* {
+    margin: 0;
+}
+
+body {
+    background-image: url(../src/bg/bg2.png);
+    object-fit: fill;
+    background-size: auto;
+    background-position: center;
+}
+
+/*-------Styles Header------*/
+header {
+    background-color: transparent;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logo-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    height: 60px;
+    width: 60px;
+    margin: 0.2rem;
+}
+
+.logo-header>img {
+    height: 50px;
+    width: 50px;
+    padding: 0.5rem;
+}
+
+.titles-header {
+    font-family: 'Zen Dots', Arial, Helvetica, sans-serif;
+    color: #dddcdc;
+}
+
+.titles-header>h1 {
+    font-size: 18px;
+}
+
+/*-------Styles Main--------*/
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem;
+    margin: auto;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    justify-content: center;
+    width: 30rem;
+    height: auto;
+    background-color: transparent;
+    border: 3px solid #A1A1A9;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: auto;
+}
+
+.subdivision {
+    display: none;
+    padding: 0.2rem;
+    margin: 0.1rem 0.4rem;
+    font-family: 'Zen Dots', Arial, Helvetica, sans-serif;
+}
+
+/*Clase active del section class sudivision*/
+.active {
+    display: block;
+}
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    margin: auto;
+    justify-content: center;
+}
+
+/*Style container 2*/
+.containeropc {
+    display: flex;
+    flex-direction: column;
+    margin: 0.1rem;
+    align-items: center;
+    justify-content: center;
+}
+img{
+    width: 8rem;
+    border-radius: 0.7rem;
+    margin: 1rem;
+}
+
+
+/*Style container 3*/
+.div-form3 {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.div-form3>label {
+    padding: 0.3rem;
+    margin: 0.3rem;
+}
+
+.form>label {
+    padding: 0.1rem;
+    margin: 0.3rem;
+    color: #dddcdc;
+}
+
+.div-form3>span {
+    font-size: 14px;
+    padding: 0.1rem;
+    margin: auto 3rem;
+}
+
+.form>input {
+    width: auto;
+    height: 2rem;
+    border-radius: 0.5rem;
+    border: 2px solid #A1A1A9;
+    background-color: transparent;
+    padding: 0.3rem;
+    margin: 0.3rem;
+    font-family: 'Zen Dots', Arial, Helvetica, sans-serif;
+}
+.form>button {
+    width: 8rem;
+    height: 2.5rem;
+    border: none;
+    background-color: #293277;
+    border-radius: 2rem;
+    padding: 0.3rem;
+    margin: 1rem auto;
+    font-family: 'Zen Dots', Arial, Helvetica, sans-serif;
+}
+.form>button:hover {
+    background-color: #5c5589;
+}
+.buttons_container{
+    display: flex;
+    flex-direction: row;
+    padding: auto;
+}
+.buttons_container>button {
+    width: 8rem;
+    height: 2.5rem;
+    border: none;
+    background-color: #293277;
+    border-radius: 2rem;
+    padding: 0.3rem;
+    margin: 1rem auto;
+    font-family: 'Zen Dots', Arial, Helvetica, sans-serif;
+    color: #c6c6c6;
+}
+.buttons_container>button:hover {
+    background-color: #5c5589;
+}
+
+
+
+.steps {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 20rem;
+    height: 2.5rem;
+    background-color: transparent;
+    padding: 0.5rem;
+    margin: auto;
+}
+
+.textstep {
+    font-family: 'Zen Dots', Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    padding: 0.3rem;
+    margin: auto 0.3rem;
+}
+
+/*-------Styles footer------*/
+footer {
+    background-color: transparent;
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 14px;
+    font-family: 'Zen Dots', Arial, Helvetica, sans-serif;
+    color: #dddcdc;
+    border: none;
+}
+
+/*link: propiedad cuando el link no ha sido visitado*/
+.links:link {
+    color: #5c5589;
+}
+
+/*visited: propiedad cuando el link ha sido visitado*/
+.links:visited {
+    color: #293277;
+}
+
+/*hover: propiedad cuando se pasa el cursor*/
+.links:hover {
+    color: #bfbfbf;
+}
+
