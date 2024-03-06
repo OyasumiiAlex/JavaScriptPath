@@ -66,4 +66,12 @@ reproductor de música simple que pruebe sus capacidades de administración de d
 <img width="450" alt="desktopmp3" src="https://github.com/OyasumiiAlex/devChallenges-JavaScriptPath/assets/44487342/8195bc39-5744-486b-bcdd-0f43a3fe9f94">
 <img width="170" alt="mobilemp3" src="https://github.com/OyasumiiAlex/devChallenges-JavaScriptPath/assets/44487342/58d75812-15b8-4791-9af5-2aee6c9f9164">
 
-
+- ##### 3) QR code generator
+  ###### Descripción:
+<p>Este desafío brinda una excelente oportunidad para practicar sus habilidades de JavaScript creando un QR simple.
+Aplicación generadora de código que requiere el uso de una biblioteca externa.</p>
+<p>Mockup</p>
+<img width="350" alt="QRDesktop" src="https://github.com/OyasumiiAlex/devChallenges-JavaScriptPath/assets/44487342/2c5649d8-58b4-45c3-af33-0d95a8425887">
+<img width="350" alt="QRDesktop2" src="https://github.com/OyasumiiAlex/devChallenges-JavaScriptPath/assets/44487342/8f27c196-349b-40ea-a503-fe46bbca0d1a">
+<br>
+<p>Resultado</p>
