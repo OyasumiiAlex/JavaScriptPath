@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="https://cdn.jsdelivr.net/npm/qrcode@1.4.4/dist/qrcode.min.js"></script>
+    <script src="main.js"></script>
     <link rel="icon" href="../src/icons/devchallenges.png">
     <link rel="stylesheet" href="style.css">
     <title>QR page</title>
 </head>
+
 <body>
     <header>
         <section class="logo-header">
@@ -18,7 +22,7 @@
     </header>
     <main>
         <section class="container">
-            <section class="subdivision" id="step1">
+            <section class="subdivision active" id="step1">
                 <form class="form">
                     <span id="errorMsg" class="error-message"></span>
                     <label for="nombre">Please fill the label</label>
@@ -26,16 +30,16 @@
                     <button id="changeform1" type="button">Continue</button>
                 </form>
             </section>
-            <section class="subdivision active" id="step2">
+            <section class="subdivision" id="step2">
                 <form class="form">
-                    <div class="containeropc">
+                    <div class="containeropc" id="qr_code">
                         <img src="../src/bg/qrcode_example.png" alt="">
                     </div>
                     <div class="buttons_container">
-                        <button id="changeform2" type="button">Download</button>
-                        <button id="changeform2" type="button">Share</button>
+                        <button id="button1qr" type="button">Download</button>
+                        <button id="button2qr" type="button">Share</button>
                     </div>
-                    
+
                 </form>
             </section>
         </section>
@@ -44,6 +48,6 @@
         <p>Created by <a class="links" target="_blank"
                 href="https://www.github.com/OyasumiiAlex">AlexHM</a>-devChallenges.io</p>
     </footer>
-    <script src="main.js"></script>
 </body>
+
 </html>
