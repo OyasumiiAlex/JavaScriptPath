@@ -75,6 +75,12 @@ Aplicación generadora de código que requiere el uso de una biblioteca externa.
 <img width="350" alt="QRDesktop2" src="https://github.com/OyasumiiAlex/devChallenges-JavaScriptPath/assets/44487342/8f27c196-349b-40ea-a503-fe46bbca0d1a">
 <br>
 <p>Resultado</p>
+<p>Para este resultado se hizo uso de la libreria "qrcodejs" el cual es parte de un repositorio abierto en github, pero para fines practicos puedes exportar el link de la libreria y anañadirla en tu estructura HTML, adjunto los links de ambos para mayor facilidad de uso:</p>
+
+[Link de la libreria](https://cdnjs.com/libraries/qrcodejs "link de la libreria")
+
+[Repositorio de la libreria](https://github.com/davidshimjs/qrcodejs "repositorio de la libreria")
+
 <img width="350" alt="QRDesktopPreview2" src="https://github.com/OyasumiiAlex/devChallenges-JavaScriptPath/assets/44487342/87d2523d-f296-472c-a9ad-1c1fd6c56c2f">
 <img width="350" alt="QRDesktopPreview" src="https://github.com/OyasumiiAlex/devChallenges-JavaScriptPath/assets/44487342/b1c6662f-5f19-481b-a6d8-042136f97301">
 
