@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const inputlink = document.getElementById('link_input');
     const urlbutton = document.getElementById('form1_button');
     let qrcontent = document.getElementById('qr_code');
+    let downloadbutton = document.getElementById('button1qr');
 
     const newqrcode = new QRCode(qrcontent, {
         colorDark: "#000000",
@@ -31,7 +32,16 @@ document.addEventListener("DOMContentLoaded", function() {
             stepTwo.classList.remove('active');
         }
     }
-    //Evento del boton
+    //Funcion para descargar la imagen
+    function downloadQR(){
+        const downloadLink = document.createElement('a');
+        const qrDataUrl = document.querySelector('#qr_code canvas').toDataURL('image/png');
+        downloadLink.href = qrDataUrl;
+        downloadLink.download = 'codigo_qr.png';
+        downloadLink.click(); 
+    }
+
+    //Evento del boton "continue"
     urlbutton.addEventListener('click', function () {
         console.log('Botón form1 presionado');
         if (isValidInput()) {
@@ -44,5 +54,11 @@ document.addEventListener("DOMContentLoaded", function() {
                 alert('Ocurrió un error al crear el código QR. Por favor, inténtalo de nuevo.');
             }
         }
+    });
+
+    //Evento del boton de descarga
+    downloadbutton.addEventListener('click', function(){
+        console.log('Presionado el boton desacargar');
+        downloadQR();
     });
 });
