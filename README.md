@@ -81,6 +81,10 @@ Aplicación generadora de código que requiere el uso de una biblioteca externa.
 
 [Repositorio de la libreria](https://github.com/davidshimjs/qrcodejs "repositorio de la libreria")
 
+<p>Cabe añadir que para la funcionalidad de compartir la imagen QR se hizo uso de una API, la cual adjunto la documentacion para mas información, agregando que dicha funcionalidad parece tener problemas de compatibilidad con algunos navegadores, por lo que al hacer uso de esta marcara una alerta de compatibilidad</p>
+
+[API Web Share](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/share "API Web Share")
+
 <img width="350" alt="QRDesktopPreview2" src="https://github.com/OyasumiiAlex/devChallenges-JavaScriptPath/assets/44487342/87d2523d-f296-472c-a9ad-1c1fd6c56c2f">
 <img width="350" alt="QRDesktopPreview" src="https://github.com/OyasumiiAlex/devChallenges-JavaScriptPath/assets/44487342/b1c6662f-5f19-481b-a6d8-042136f97301">
 
