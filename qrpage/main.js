@@ -48,16 +48,23 @@ document.addEventListener("DOMContentLoaded", function () {
     //Try catch para compartir imagen
     sharebutton.addEventListener('click', async () => {
         try {
+            // Verificar si navigator.share está definido y no es null
+        if (Navigator.share) {
+            console.log("navigator.share está definido. Compartiendo...");
             // Convertir el código QR en una URL de datos (data URL)
             const qrDataUrl = document.querySelector("#qr_code canvas").toDataURL("image/png");
             console.log("URL de datos generada:", qrDataUrl);
             // Compartir la imagen del código QR utilizando la API Web Share
-            await navigator.share({ 
+            await Navigator.share({ 
                 title: "Compartir código QR", // Título opcional
                 text: "Echa un vistazo a este código QR", // Texto opcional
                 url: qrDataUrl 
             });
             console.log("La imagen del código QR se compartió exitosamente.");
+        } else {
+            console.log("navigator.share no está disponible en este navegador.");
+            alert("La API Web Share no está disponible en este navegador.");
+        }
         } catch (error) {
             console.error("Error al compartir la imagen del código QR:", error);
             alert("No se pudo compartir la imagen del código QR. Inténtalo de nuevo.");
