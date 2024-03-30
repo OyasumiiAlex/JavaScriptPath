@@ -1,9 +1,10 @@
 //Evento que carga el DOM
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const inputlink = document.getElementById('link_input');
     const urlbutton = document.getElementById('form1_button');
     let qrcontent = document.getElementById('qr_code');
     let downloadbutton = document.getElementById('button1qr');
+    let sharebutton = document.getElementById('button2qr');
 
     const newqrcode = new QRCode(qrcontent, {
         colorDark: "#000000",
@@ -33,13 +34,35 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
     //Funcion para descargar la imagen
-    function downloadQR(){
+    function downloadQR() {
+        //Enlace temporal para la descarga
         const downloadLink = document.createElement('a');
+        //Obtencion de QR canvas y conversion a img
         const qrDataUrl = document.querySelector('#qr_code canvas').toDataURL('image/png');
+        //Asignamos la conversion de imagen a la direccion donde debe descargar la imagen
         downloadLink.href = qrDataUrl;
         downloadLink.download = 'codigo_qr.png';
-        downloadLink.click(); 
+        downloadLink.click();
     }
+    
+    //Try catch para compartir imagen
+    sharebutton.addEventListener('click', async () => {
+        try {
+            // Convertir el código QR en una URL de datos (data URL)
+            const qrDataUrl = document.querySelector("#qr_code canvas").toDataURL("image/png");
+            console.log("URL de datos generada:", qrDataUrl);
+            // Compartir la imagen del código QR utilizando la API Web Share
+            await navigator.share({ 
+                title: "Compartir código QR", // Título opcional
+                text: "Echa un vistazo a este código QR", // Texto opcional
+                url: qrDataUrl 
+            });
+            console.log("La imagen del código QR se compartió exitosamente.");
+        } catch (error) {
+            console.error("Error al compartir la imagen del código QR:", error);
+            alert("No se pudo compartir la imagen del código QR. Inténtalo de nuevo.");
+        }
+    });
 
     //Evento del boton "continue"
     urlbutton.addEventListener('click', function () {
@@ -57,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     //Evento del boton de descarga
-    downloadbutton.addEventListener('click', function(){
+    downloadbutton.addEventListener('click', function () {
         console.log('Presionado el boton desacargar');
         downloadQR();
     });
