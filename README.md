@@ -25,7 +25,7 @@ los cuales tienen la finalidad de poner en practica los fundamentos de javascrip
 <p>Define la jerarquía y disposición de los elementos en la página, como textos, imágenes y enlaces.</p>
 
 #### Estado del Proyecto
-- <p> En desarrollo </p>
+- <p> Finalizado </p>
 
 > [!IMPORTANT]
 > Antes de ejecutar tome en cuenta
